@@ -1,0 +1,220 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  color: #ffffff;
+  background-color: #00000000;
+  padding: 0;
+  margin: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg21 {background-image: url("../img/Emya.jpg");}
+
+::-webkit-scrollbar { width: 0; }
+
+.logo {
+    width: 135px;
+    margin: 10px 0 0 15px;
+    height: 40px;
+    display: inline-block;
+}
+
+.menu {
+    vertical-align: top;
+    position: relative;
+    text-align: center;
+    font-size: 26px;
+    display: inline-block;
+    height: 80px;
+    width: 70%;
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+}
+  
+  nav ul li {
+    align-items: center;
+    margin: 0 1rem;
+    display: inline-block;
+    z-index: 500;
+  }
+
+header {
+    width: 100%;
+    background-color: #000000aa;
+    position: fixed;
+    margin: 0;
+    z-index: 500;
+}
+
+a {
+    color: #637592;
+    text-decoration: none;
+}
+
+.acor-container {
+    padding: 150px 0 0 0;
+    margin: auto;
+    width: 85vw;    
+}
+.acor-container .acor-body {
+    width: 80vw;
+    margin: 0 auto;
+    height: 0;
+    color: rgb(255, 255, 255);
+    background-color: rgba(34, 33, 33, 0.753);
+    padding: 0 30px;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 10px 16px rgba(0,0,0,0.2);
+}
+.acor-container .acor-body p {
+    margin: 0 0 10px;
+}
+.acor-container label {
+    cursor: pointer;
+    background-color: #000000ce;
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 300;
+    box-sizing: border-box; 
+    font-size: 24px;
+    margin: 0 0 5px;
+    transition: color .35s;
+}
+.acor-container label:hover {
+    color: #FFF;
+}
+.acor-container input{
+    display: none;
+}
+.acor-container label:before {
+    content: '\276F';
+    float: right;
+}
+.acor-container input:checked + label {
+    background-color: #310e0e;
+    color: #FFF;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.4), 0 28px 30px rgba(0,0,0,0.3);
+}
+.acor-container input:checked + label:before {
+    transition: transform .35s;
+    transform: rotate(90deg);
+}
+.acor-container input:checked + label + .acor-body {
+    height: auto;
+    margin-top: -5px;
+    color: #ffffff;
+    padding: 20px 30px 10px;
+}
+
+.carusel {
+    z-index: 1;
+    float: left;
+    width: 256px;
+    height: 256px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+button {
+    height: 256px;
+    width: 40px;
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 32px;
+    background-color: #0f0f0f7d;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2;
+}
+
+.slider-next {
+    right: 0rem;
+}
+
+.slider-pred {
+    left: 0rem;
+}
+
+.slider-line {
+    width: 1024px;
+    height: 256px;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+    z-index: 1;
+}
+
+.car {
+    margin: 0;
+    padding: 0;
+    width: 256px;
+    height: 256px;
+}
+
+/*---------------------------*/
+body.pc .burger {
+    display: none;
+}
+
+body.mobile .burger {
+    display: block;
+    font-size: 32px;
+    font-weight: 900;
+    float: right;
+    margin: 15px 25px;
+    color: #637592;
+}
+
+body.mobile .menu {
+    display: none;
+}
+
+body.mobile .act {
+    display: inline-block;
+    width: 300px;
+    background-color: #000000cc;
+    right: 0;
+}
+
+body.mobile .menu{
+    width: 50%;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    right: 0;
+    text-align: center;
+    z-index: 500;
+    position: absolute;
+    margin-top: 80px;
+}
+
+body.mobile ul {
+    display: block;
+    text-align: left;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+body.mobile li{
+    display: list-item;
+    margin: 15px 0;
+    text-decoration: none;
+    color: #637592;
+}
+
+body.mobile.bg21 {background-image: url("../img/Emya1.png");}
