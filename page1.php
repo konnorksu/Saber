@@ -1,29 +1,6 @@
-<!DOCTYPE html>
-<html lang="sk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css" type="text/css">
-    <link rel="icon" href="img/chibi1.png">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js">
-    </script>
-    <title>Saber</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo"><img src="img/saber-text.png" class="logo"></a>
-            <span class="burger">&#8801;</span>
-            <div class="menu">
-                <ul id="menu">
-                    <li><a href="page1.html">Information</a></li>
-                    <li><a href="page2.html">Masters</a></li>
-                    <li><a href="page3.html">Sign up</a></li>
-                    <li><a href="page4.html">Alt-version</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<?php
+    include_once('partials/header.php');
+?>    
     <main>
         <div class="parallax bg11">
             <div class="content-in-parallax right">
@@ -50,29 +27,9 @@
             </div>
         </div>
     </main>
-    <footer>
-        <img src="img/saber-text.png" class="logo l2">
-        <hr>
-       <table>
-            <tr>
-                <th>About</th>
-                <td>konnorksu@gmail.com</td>
-                <td>jednoduchá webová stránka</td>
-            </tr>
-            <tr>
-                <th>Saber</th>
-                <td>&#169;type-moon</td>
-                <td>&#169;konnorksu</td>
-            </tr>
-            <tr>
-                <th>Potrebujete webovú stránku? </th>
-                <td>napíšte</td>
-                <td><a href="">&#187; click &#171;</a></td>
-            </tr>
-       </table>
-       <hr>
-       <p class="f">Vytvorila Ksenia Bibetka</p>
-    </footer>
+    <?php
+    include_once('partials/footer.php');
+    ?>
 </body>
 <script src="js/main.js"></script>
 </html>
