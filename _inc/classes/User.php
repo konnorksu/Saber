@@ -3,39 +3,55 @@
         private $db;
         public function __construct()
         {
-            $this->db = $this->db_connection();
+            $this->db = $this->make_connection();
         }
-        public function login($useremail, $password){
+        public function login($email, $password){
             try{
-                $data = array('user_email' => $useremail, 'user_password' => md5($password));
-                $sql = 'SELECT * FROM user WHERE email = :user_email AND password = :user_password';
-                $query_run = $this->db->prepare($sql);
-                $query_run->execute($data);
-                $n_rows = $query_run->rowCount();
-                if($n_rows == 1){
-                    $_SESSION['logged_in'] = true;
-                    $_SESSION['is_admin'] = $query_run->fetch()->role;
+                $sql = "SELECT * FROM user WHERE email = ?";
+                $query = $this->db->prepare($sql);
+                $query->execute([$email]);
+                $user = $query->fetch();
+                if($user){
+                    
+                if($user->password === md5($password)){
+                    $_SESSION['is_logged_in'] = true;
+                    $_SESSION['is_admin'] = $user->role;
+                    header('Location: index.php');
                     return true;
                 }
                 else{
+                    echo "<h1>Nespravne heslo</h1><br><br>";
+                    return false;
+                }
+                }
+                else{
+                    echo "<h1>Taký použivateľ neexistuje</h1><br><br>";
                     return false;
                 }
             }
-            catch(PDOException $e){
-                echo $e->getMessage();
-            }
+                catch(PDOException $e){
+                    echo "Chyba pri registracii: ".$e->getMessage();
+                    return false;
+                }
         }
-        public function register($useremail, $password){
+        public function register($email, $password){
             try{
-                $hashed_password = $password;
-                $data = array('user_email' => $useremail, 'user_password' => md5($hashed_password), 'user_role'=>'0');
-                $sql = "INSERT INTO user (email, password, role) VALUES (:user_email, :user_password, :user_role)";
-                $query_run = $this->db->prepare($sql);
-                $query_run->execute($data);
+            $sql = "SELECT * FROM user WHERE email = ?";
+            $query = $this->db->prepare($sql);
+            $query->execute([$email]);
+            if($query->rowCount() == 1){
+                return false;
+            }
+            else{
+                $data = array('email' => $email, 'password' => md5($password), 'role' => 0);
+                $sql = "INSERT INTO user (email, password, role) VALUES (:email, :password, :role)";
+                $query = $this->db->prepare($sql);
+                $query->execute($data);
                 return true;
+                }
             }
             catch(PDOException $e){
-                echo "CHyba pri registracii: ".$e->getMessage();
+                echo "Chyba pri registracii: ".$e->getMessage();
                 return false;
             }
         }

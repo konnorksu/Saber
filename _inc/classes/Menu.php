@@ -21,6 +21,13 @@
             // Vráti vygenerovaný HTML kód pre navigačné menu
             return $menuItems;
         }
+
+        public function admin_link(){
+            if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] == true && $_SESSION['is_admin'] == 1){
+                echo '<li><a href="admin.php">Admin</a></li>';
+                
+            }
+        }
     }
 
 ?>

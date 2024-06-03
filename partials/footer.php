@@ -22,3 +22,8 @@
        <hr>
        <p class="f">Vytvorila Ksenia Bibetka</p>
     </footer>
+    </body>
+    <?php
+        $page_object->add_scripts();
+    ?>
+</html>

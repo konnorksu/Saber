@@ -6,7 +6,7 @@
             <div class="content-in-parallax left h60">
                 <h3>Emiya Shiro</h3>
                 <p>Emiya Shiro (衛宮 士郎, Emiya Shirō?) je hlavná postava Fate/stay night, majster šable v piatej vojne o Svätý grál. Je adoptívnym synom Emiya Kiritsugu, adoptívnym bratom Iliaswilu von Einzbern a mladšou verziou Emiya.</p>
-                <a class="button"> v blízkej dobe...</a>
+                <a class="button" href="page21.php">pozerat </a>
             </div>
         </div>
         <div class="parallax bg23">
@@ -31,9 +31,6 @@
             </div>
         </div>
     </main>
-    <?php
+<?php
     include_once('partials/footer.php');
-    ?>
-</body>
-<script src="js/main.js"></script>
-</html>
+?>

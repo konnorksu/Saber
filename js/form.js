@@ -30,6 +30,8 @@ function validation(form) {
 
     const checkbox = document.getElementById('check');
 
+    const password = document.getElementById('password');
+
     for (const input of allInputs) {
 
         removeError(input)
@@ -41,11 +43,7 @@ function validation(form) {
                 result = false
             }
         }
-        if (checkbox.checked) {
-            console.log('Checkbox is checked');
-          } else {
-            result = false
-        }
+        
     }
     return result
 }
@@ -56,7 +54,7 @@ document.getElementById('add-form').addEventListener('submit', function (event) 
 
     if (validation(this) == true) {
         alert('Good!')
-        window.location.href="thank.html"; 
+        window.location.href="admin.php"; 
     }
 
 })

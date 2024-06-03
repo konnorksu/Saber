@@ -11,8 +11,6 @@
 
         function add_stylesheet() {
             echo '<link rel="stylesheet" href="../css/style.css">';
-        
-            //$page_name = basename($_SERVER["SCRIPT_NAME"], '.php');
             
             switch($this->page_name){
                     case 'index':
@@ -21,6 +19,9 @@
                     case 'page3':
                     case 'page4':
                     case 'thank':
+                    case 'admin':
+                    case 'register':
+                    case 'edit':
                         echo '<link rel="stylesheet" href="style/style.css" type="text/css">';
                         break;
                     case 'page21':
@@ -28,17 +29,23 @@
                         break;
             }
         }
-            /**
-         * Generuje odkazy na JS súbory pre pätu stránky
-         *
-         * Táto funkcia generuje odkazy na základné JS súbory a pridáva odkazy na špecifické
-         * JS súbory podľa názvu aktuálnej stránky. Odkazy sú vložené na koniec body tagu.
-         *
-         * @return void
-         */
+
         function add_scripts(){
-            echo('<script src="../js/main.js"></script>');
+            switch($this->page_name){
+                case 'index':
+                case 'page1':
+                case 'page2':
+                case 'page4':
+                case 'page21':
+                case 'thank':
+                case 'page3':
+                case 'admin':
+                case 'register':
+                case 'edit':
+                    echo('<script src="js/main.js"></script>');
+                    break;
             //$page_name = basename($_SERVER["SCRIPT_NAME"],'.php');
+            }
             
         }
     }

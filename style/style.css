@@ -224,9 +224,13 @@ input {
     outline: none;
 }
 
+span{
+    padding-top: 30px;
+}
+
 table {
     margin: 15px auto;
-    color: #ffffff53;
+    color: #ffffff;
     text-align: left;
 }
 
@@ -236,7 +240,7 @@ td {
 }
 
 table a {
-    color: #ffffff53;
+    color: #00000053;
 }
 
 footer {
@@ -257,7 +261,7 @@ footer {
     transform: 0.3s;
 }
 
-form {
+.form1 {
     display: block;
     margin: auto;
     margin-bottom: 25vh;
@@ -329,6 +333,7 @@ textarea {
     text-align: left;
     display: block;
     margin-bottom: 100px;
+    color: white;
 }
 
 ol li{
@@ -612,7 +617,7 @@ body.mobile .content-in-parallax.w80 .banner{
     width: 15px;
 }
 
-button {
+.button1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 24px;
     margin: auto;

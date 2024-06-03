@@ -2,7 +2,6 @@
     include_once('partials/header.php');
 ?>    
     <main>
-    <div class="bg21">
     <div class="acor-container">          
     
         <input type="checkbox" name="chacor" id="chacor1"/>
@@ -102,7 +101,6 @@
         <div class="acor-body">
             <p>Je to veľmi nezvyčajný mág, ktorý používa vlastnú verziu projekčnej mágie. Pôvodne bol Širo úplne neschopný mág. Mal len schopnosť používať Posilňovaciu a Projekčnú mágiu s nízkou pravdepodobnosťou úspechu. Posilňovanie mu umožňuje analyzovať štrukturálne zloženie predmetu a zlepšiť jeho vlastnosti, napríklad ho urobiť silnejším, zmeniť jeho tvar na pohodlnejší alebo ho vrátiť do pôvodného stavu. Posilňovanie môže použiť aj na zlepšenie fyzických schopností svojho tela, napríklad zraku, vďaka ktorému vidí približne na štyri kilometre. Shiro je tiež veľmi zručný v mágii Pochopenie štruktúry, ktorá mu umožňuje rozpoznať štruktúru a zloženie predmetov, akoby presne vedel, ako boli vyrobené. Projekcia, napriek tomu, že ide o zručnosť vysokej úrovne, je všeobecne považovaná za neužitočnejšiu ako Opevnenie kvôli vyšším nákladom na manu a spočiatku bolo všetko, čo Širo premietal, nepoužiteľné a vnútri prázdne (duté). Hoci vytvorené predmety jednoducho napodobňujú podobu, len málo ľudí si dokáže na prvý pohľad uvedomiť, že ide o falzifikáty. Každý mág, ktorý by analyzoval zloženie, by nebol schopný rozpoznať falzifikát, a dokonca aj niekto, kto pracuje s duchovnými médiami, by dokázal vycítiť len určitú nezrovnalosť. A keďže oddelenie duchovného výskumu dostáva len predmety s históriou, šanca na odhalenie je veľmi malá. Širovo kúzlo štrukturálnej analýzy sa nevzťahuje na silu Mystických očí.</p>
         </div>
-    </div>
 </div>
     </main>
 </body>

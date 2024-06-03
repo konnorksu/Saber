@@ -11,7 +11,6 @@
     </script>
     <title>Saber</title>
     <?php
-      //add_stylesheet();
       $page_name = basename($_SERVER["SCRIPT_NAME"],'.php');
       $page_object = new Page($page_name);
       $page_object->add_stylesheet();
@@ -26,16 +25,15 @@
                 <ul>
                     <?php
                         $pages = array('Information'=>'page1.php',
-                            'Masters'=>'page2.php',
-                            'Sing up'=>'page3.php',
+                            'Masters'=>'page2.php'
                             //'Alt-version'=>'page4.php'  
                         );
-                        //echo(generate_menu($pages));
-                        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
-                            $pages['odhlasit sa'] = 'logout.php';
-                           }
-                           $menu_object = new Menu($pages);
+                        $menu_object = new Menu($pages);
                            echo($menu_object->generate_menu());
+                           if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] == true){
+                            echo '<li><a href="logout.php">Logout</a></li>';
+                            $menu_object->admin_link();
+                           } else echo '<li><a href="page3.php">Login</a></li>';
                     ?>
                 </ul>
             </div>
